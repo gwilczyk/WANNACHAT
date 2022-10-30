@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import backgroundImage from '@assets/images/background.jpg'
-import { SigninPage } from '@pages/auth'
+import { SigninPage, SignupPage } from '@pages/auth'
 import '@pages/auth/AuthTabs/AuthTabs.scss'
 import { useState } from 'react'
 
@@ -40,7 +40,7 @@ const AuthTabs = () => {
             )}
             {type === 'Signup' && (
               <div className="tab-item">
-                <SigninPage />
+                <SignupPage />
               </div>
             )}
           </div>

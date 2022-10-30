@@ -1,15 +1,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Button from '@components/Button/Button'
 import Input from '@components/Input/Input'
-import '@pages/auth/SigninPage/SigninPage.scss'
-import { FaArrowRight } from 'react-icons/fa'
+import '@pages/auth/SignupPage/SignupPage.scss'
 
-const SigninPage = () => {
+const SignupPage = () => {
   const handleChange = () => {}
 
   return (
     <div className="auth-inner">
-      <div className="alerts alert-error" role="alert">
+      <div className="alerts alert-success" role="alert">
         Error message
       </div>
 
@@ -17,12 +16,21 @@ const SigninPage = () => {
         <div className="form-input-container">
           <Input
             handleChange={handleChange}
+            id="username"
+            labelText="Username"
+            name="username"
+            placeholder="Enter your username"
+            type="text"
+            value="Jane Doe"
+          />
+          <Input
+            handleChange={handleChange}
             id="email"
             labelText="Email"
             name="email"
             placeholder="Enter your email"
             type="email"
-            value="john@mail.com"
+            value="jane@mail.com"
           />
           <Input
             handleChange={handleChange}
@@ -33,19 +41,11 @@ const SigninPage = () => {
             type="password"
             value="P4ssword"
           />
-          <label className="checkmark-container" htmlFor="checkbox">
-            <Input handleChange={handleChange} id="checkbox" name="checkbox" type="checkbox" value={false} />
-            Keep me signed in
-          </label>
         </div>
-        <Button className="auth-button button" disabled={true} label="SIGN IN" />
-
-        <span className="forgot-password">
-          Forgot password? <FaArrowRight className="arrow-right" />
-        </span>
+        <Button className="auth-button button" disabled={true} label="SIGN UP" />
       </form>
     </div>
   )
 }
 
-export default SigninPage
+export default SignupPage
