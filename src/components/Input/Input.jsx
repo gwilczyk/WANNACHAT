@@ -1,7 +1,8 @@
-import { func, string } from 'prop-types'
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
+import '@components/Input/Input.scss'
+import { bool, func, oneOfType, string } from 'prop-types'
 
-const Input = ({ className, handleChange, labelText, name, placeholder, type, value }) => {
+const Input = ({ className, handleChange, id, labelText, name, placeholder, type, value }) => {
   return (
     <>
       <div className="form-row">
@@ -14,6 +15,7 @@ const Input = ({ className, handleChange, labelText, name, placeholder, type, va
         <input
           autoComplete="false"
           className={`${className || 'form-input'}`}
+          id={id}
           name={name}
           onChange={handleChange}
           placeholder={placeholder}
@@ -28,11 +30,12 @@ const Input = ({ className, handleChange, labelText, name, placeholder, type, va
 Input.propTypes = {
   className: string,
   handleChange: func,
+  id: string,
   labelText: string,
   name: string.isRequired,
   placeholder: string,
   type: string.isRequired,
-  value: string
+  value: oneOfType([string, bool])
 }
 
 export default Input

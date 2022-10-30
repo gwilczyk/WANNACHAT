@@ -1,6 +1,6 @@
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
+import { AuthTabs } from '@pages/auth'
 import { useRoutes } from 'react-router-dom'
-import { AuthTabs } from './pages/auth'
 
 export const AppRouter = () => {
   const elements = useRoutes([

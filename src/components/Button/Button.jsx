@@ -1,5 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { any, bool, func, string } from 'prop-types'
-import React from 'react'
 
 const Button = (props) => {
   const { className, disabled, handleClick, label } = props

@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import backgroundImage from '../../../assets/images/background.jpg'
-import './AuthTabs.scss'
+/* eslint-disable react/react-in-jsx-scope */
+import backgroundImage from '@assets/images/background.jpg'
+import { SigninPage } from '@pages/auth'
+import '@pages/auth/AuthTabs/AuthTabs.scss'
+import { useState } from 'react'
 
 const AuthTabs = () => {
-  const [type, setType] = useState('SignIn')
+  const [type, setType] = useState('Signin')
 
   const handleClick = (event) => {
     event.preventDefault()
@@ -18,21 +20,29 @@ const AuthTabs = () => {
         <div className="tabs">
           <div className="tabs-auth">
             <ul className="tab-group">
-              <li className="tab active" onClick={handleClick}>
-                <button className="login" name="SignIn">
+              <li className={`tab ${type === 'Signin' ? 'active' : ''}`} onClick={handleClick}>
+                <button className="signin" name="Signin">
                   Sign In
                 </button>
               </li>
 
-              <li className="tab" onClick={handleClick}>
-                <button className="signup" name="SignUp">
+              <li className={`tab ${type === 'Signup' ? 'active' : ''}`} onClick={handleClick}>
+                <button className="signup" name="Signup">
                   Sign Up
                 </button>
               </li>
             </ul>
 
-            {type === 'SignIn' && <div className="tab-item">login component</div>}
-            {type === 'SignUp' && <div className="tab-item">register component</div>}
+            {type === 'Signin' && (
+              <div className="tab-item">
+                <SigninPage />
+              </div>
+            )}
+            {type === 'Signup' && (
+              <div className="tab-item">
+                <SigninPage />
+              </div>
+            )}
           </div>
         </div>
       </div>

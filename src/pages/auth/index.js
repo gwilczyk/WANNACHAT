@@ -1,3 +1,4 @@
-import AuthTabs from './AuthTabs/AuthTabs'
+import AuthTabs from '@pages/auth/AuthTabs/AuthTabs'
+import SigninPage from '@pages/auth/SigninPage/SigninPage'
 
-export { AuthTabs }
+export { AuthTabs, SigninPage }
