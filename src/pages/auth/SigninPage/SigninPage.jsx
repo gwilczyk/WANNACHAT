@@ -3,6 +3,7 @@ import Button from '@components/Button/Button'
 import Input from '@components/Input/Input'
 import '@pages/auth/SigninPage/SigninPage.scss'
 import { FaArrowRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const SigninPage = () => {
   const handleChange = () => {}
@@ -35,14 +36,16 @@ const SigninPage = () => {
           />
           <label className="checkmark-container" htmlFor="checkbox">
             <Input handleChange={handleChange} id="checkbox" name="checkbox" type="checkbox" value={false} />
-            Keep me signed in
+            Keep Me Signed In
           </label>
         </div>
         <Button className="auth-button button" disabled={true} label="SIGN IN" />
 
-        <span className="forgot-password">
-          Forgot password? <FaArrowRight className="arrow-right" />
-        </span>
+        <Link to="/forgot-password">
+          <span className="forgot-password">
+            Forgot Password? <FaArrowRight className="arrow-right" />
+          </span>
+        </Link>
       </form>
     </div>
   )
