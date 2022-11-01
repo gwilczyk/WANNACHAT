@@ -2,7 +2,7 @@
 import '@components/Input/Input.scss'
 import { bool, func, oneOfType, string } from 'prop-types'
 
-const Input = ({ className, handleChange, id, labelText, name, placeholder, type, value }) => {
+const Input = ({ className, id, labelText, name, onChange, placeholder, type, value }) => {
   return (
     <>
       <div className="form-row">
@@ -17,7 +17,7 @@ const Input = ({ className, handleChange, id, labelText, name, placeholder, type
           className={`${className || 'form-input'}`}
           id={id}
           name={name}
-          onChange={handleChange}
+          onChange={onChange}
           placeholder={placeholder}
           type={type}
           value={value}
@@ -29,7 +29,7 @@ const Input = ({ className, handleChange, id, labelText, name, placeholder, type
 
 Input.propTypes = {
   className: string,
-  handleChange: func,
+  onChange: func,
   id: string,
   labelText: string,
   name: string.isRequired,

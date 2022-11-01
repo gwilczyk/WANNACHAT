@@ -31,10 +31,10 @@ const ForgotPasswordPage = () => {
                 <form className="auth-form">
                   <div className="form-input-container">
                     <Input
-                      handleChange={handleChange}
                       id="email"
                       labelText="Email"
                       name="email"
+                      onChange={handleChange}
                       placeholder="Enter your email"
                       type="email"
                       value="john@mail.com"

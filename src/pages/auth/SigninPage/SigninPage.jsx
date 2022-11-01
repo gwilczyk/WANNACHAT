@@ -17,25 +17,25 @@ const SigninPage = () => {
       <form className="auth-form">
         <div className="form-input-container">
           <Input
-            handleChange={handleChange}
             id="email"
             labelText="Email"
             name="email"
+            onChange={handleChange}
             placeholder="Enter your email"
             type="email"
             value="john@mail.com"
           />
           <Input
-            handleChange={handleChange}
             id="password"
             labelText="Password"
             name="password"
+            onChange={handleChange}
             placeholder="Enter your password"
             type="password"
             value="P4ssword"
           />
           <label className="checkmark-container" htmlFor="checkbox">
-            <Input handleChange={handleChange} id="checkbox" name="checkbox" type="checkbox" value={false} />
+            <Input id="checkbox" name="checkbox" onChange={handleChange} type="checkbox" value={false} />
             Keep Me Signed In
           </label>
         </div>

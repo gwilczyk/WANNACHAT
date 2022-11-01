@@ -32,20 +32,20 @@ const ResetPasswordPage = () => {
                     <Input
                       id="password"
                       name="password"
+                      labelText="New Password"
+                      onChange={handleChange}
+                      placeholder="New Password"
                       type="password"
                       value="P4ssword"
-                      labelText="New Password"
-                      placeholder="New Password"
-                      handleChange={handleChange}
                     />
                     <Input
                       id="cpassword"
                       name="cpassword"
+                      labelText="Confirm Password"
+                      onChange={handleChange}
+                      placeholder="Confirm Password"
                       type="password"
                       value="P4ssword"
-                      labelText="Confirm Password"
-                      placeholder="Confirm Password"
-                      handleChange={handleChange}
                     />
                   </div>
                   <Button label="RESET PASSWORD" className="auth-button button" disabled={false} />

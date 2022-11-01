@@ -25,6 +25,171 @@ import {
   FaUsers
 } from 'react-icons/fa'
 
+export const avatarColors = [
+  '#f44336',
+  '#e91e63',
+  '#2196f3',
+  '#9c27b0',
+  '#3f51b5',
+  '#00bcd4',
+  '#4caf50',
+  '#ff9800',
+  '#8bc34a',
+  '#009688',
+  '#03a9f4',
+  '#cddc39',
+  '#2962ff',
+  '#448aff',
+  '#84ffff',
+  '#00e676',
+  '#43a047',
+  '#d32f2f',
+  '#ff1744',
+  '#ad1457',
+  '#6a1b9a',
+  '#1a237e',
+  '#1de9b6',
+  '#d84315'
+]
+
+export const bgColors = [
+  '#ffffff',
+  '#f44336',
+  '#e91e63',
+  '#2196f3',
+  '#9c27b0',
+  '#3f51b5',
+  '#00bcd4',
+  '#4caf50',
+  '#ff9800',
+  '#8bc34a',
+  '#009688',
+  '#03a9f4',
+  '#cddc39'
+]
+
+export const emptyPostData = {
+  _id: '',
+  post: '',
+  bgColor: '',
+  privacy: '',
+  feelings: '',
+  gifUrl: '',
+  profilePicture: '',
+  image: '',
+  userId: '',
+  username: '',
+  email: '',
+  avatarColor: '',
+  commentsCount: '',
+  reactions: [],
+  imgVersion: '',
+  imgId: '',
+  createdAt: ''
+}
+
+export const feelingsList = [
+  {
+    index: 0,
+    name: 'happy',
+    image: happy
+  },
+  {
+    index: 1,
+    name: 'excited',
+    image: excited
+  },
+  {
+    index: 2,
+    name: 'blessed',
+    image: blessed
+  },
+  {
+    index: 3,
+    name: 'loved',
+    image: loved
+  }
+]
+
+export const fontAwesomeIcons = {
+  FaNewspaper: <FaNewspaper className="icon" />,
+  FaComments: <FaComments className="icon" />,
+  FaUsers: <FaUsers className="icon" />,
+  FaUserPlus: <FaUserPlus className="icon" />,
+  FaHeart: <FaHeart className="icon" />,
+  FaImages: <FaImages className="icon" />,
+  FaRegBell: <FaRegBell className="icon" />,
+  FaBirthdayCake: <FaBirthdayCake className="icon" />,
+  FaRegUser: <FaRegUser className="icon" />
+}
+
+export const notificationItems = [
+  {
+    index: 0,
+    title: 'Direct Messages',
+    description: 'New direct messages notifications.',
+    toggle: true,
+    type: 'messages'
+  },
+  {
+    index: 1,
+    title: 'Follows',
+    description: 'New followers notifications.',
+    toggle: true,
+    type: 'follows'
+  },
+  {
+    index: 2,
+    title: 'Post Reactions',
+    description: 'New reactions for your posts notifications.',
+    toggle: true,
+    type: 'reactions'
+  },
+  {
+    index: 3,
+    title: 'Comments',
+    description: 'New comments for your posts notifications.',
+    toggle: true,
+    type: 'comments'
+  }
+]
+
+export const privacyList = [
+  {
+    topText: 'Public',
+    subText: 'Anyone on WannaChat',
+    icon: <FaGlobe className="globe-icon globe" />
+  },
+  {
+    topText: 'Followers',
+    subText: 'Your followers on WannaChat',
+    icon: <FaUserCheck className="globe-icon globe" />
+  },
+  {
+    topText: 'Private',
+    subText: 'For you only',
+    icon: <FaLock className="globe-icon globe" />
+  }
+]
+
+export const reactionsColor = {
+  like: '#50b5ff',
+  love: '#f33e58',
+  angry: '#e9710f',
+  happy: '#f7b124',
+  sad: '#f7b124',
+  wow: '#f7b124'
+}
+
+export const reactionsMap = {
+  like,
+  love,
+  wow,
+  sad,
+  happy,
+  angry
+}
+
 export const sideBarItems = [
   {
     index: 1,
@@ -76,170 +241,11 @@ export const sideBarItems = [
   }
 ]
 
-export const feelingsList = [
-  {
-    index: 0,
-    name: 'happy',
-    image: happy
-  },
-  {
-    index: 1,
-    name: 'excited',
-    image: excited
-  },
-  {
-    index: 2,
-    name: 'blessed',
-    image: blessed
-  },
-  {
-    index: 3,
-    name: 'loved',
-    image: loved
-  }
-]
-
-export const fontAwesomeIcons = {
-  FaNewspaper: <FaNewspaper className="icon" />,
-  FaComments: <FaComments className="icon" />,
-  FaUsers: <FaUsers className="icon" />,
-  FaUserPlus: <FaUserPlus className="icon" />,
-  FaHeart: <FaHeart className="icon" />,
-  FaImages: <FaImages className="icon" />,
-  FaRegBell: <FaRegBell className="icon" />,
-  FaBirthdayCake: <FaBirthdayCake className="icon" />,
-  FaRegUser: <FaRegUser className="icon" />
-}
-
-export const privacyList = [
-  {
-    topText: 'Public',
-    subText: 'Anyone on WannaChat',
-    icon: <FaGlobe className="globe-icon globe" />
-  },
-  {
-    topText: 'Followers',
-    subText: 'Your followers on WannaChat',
-    icon: <FaUserCheck className="globe-icon globe" />
-  },
-  {
-    topText: 'Private',
-    subText: 'For you only',
-    icon: <FaLock className="globe-icon globe" />
-  }
-]
-
-export const bgColors = [
-  '#ffffff',
-  '#f44336',
-  '#e91e63',
-  '#2196f3',
-  '#9c27b0',
-  '#3f51b5',
-  '#00bcd4',
-  '#4caf50',
-  '#ff9800',
-  '#8bc34a',
-  '#009688',
-  '#03a9f4',
-  '#cddc39'
-]
-
-export const avatarColors = [
-  '#f44336',
-  '#e91e63',
-  '#2196f3',
-  '#9c27b0',
-  '#3f51b5',
-  '#00bcd4',
-  '#4caf50',
-  '#ff9800',
-  '#8bc34a',
-  '#009688',
-  '#03a9f4',
-  '#cddc39',
-  '#2962ff',
-  '#448aff',
-  '#84ffff',
-  '#00e676',
-  '#43a047',
-  '#d32f2f',
-  '#ff1744',
-  '#ad1457',
-  '#6a1b9a',
-  '#1a237e',
-  '#1de9b6',
-  '#d84315'
-]
-
-export const emptyPostData = {
-  _id: '',
-  post: '',
-  bgColor: '',
-  privacy: '',
-  feelings: '',
-  gifUrl: '',
-  profilePicture: '',
-  image: '',
-  userId: '',
-  username: '',
+export const signupInitialData = {
   email: '',
-  avatarColor: '',
-  commentsCount: '',
-  reactions: [],
-  imgVersion: '',
-  imgId: '',
-  createdAt: ''
+  password: '',
+  username: ''
 }
-
-export const reactionsMap = {
-  like,
-  love,
-  wow,
-  sad,
-  happy,
-  angry
-}
-
-export const reactionsColor = {
-  like: '#50b5ff',
-  love: '#f33e58',
-  angry: '#e9710f',
-  happy: '#f7b124',
-  sad: '#f7b124',
-  wow: '#f7b124'
-}
-
-export const notificationItems = [
-  {
-    index: 0,
-    title: 'Direct Messages',
-    description: 'New direct messages notifications.',
-    toggle: true,
-    type: 'messages'
-  },
-  {
-    index: 1,
-    title: 'Follows',
-    description: 'New followers notifications.',
-    toggle: true,
-    type: 'follows'
-  },
-  {
-    index: 2,
-    title: 'Post Reactions',
-    description: 'New reactions for your posts notifications.',
-    toggle: true,
-    type: 'reactions'
-  },
-  {
-    index: 3,
-    title: 'Comments',
-    description: 'New comments for your posts notifications.',
-    toggle: true,
-    type: 'comments'
-  }
-]
 
 export const tabItems = (showPassword, showNotification) => {
   const items = [
