@@ -241,6 +241,11 @@ export const sideBarItems = [
   }
 ]
 
+export const signinInitialData = {
+  email: '',
+  password: ''
+}
+
 export const signupInitialData = {
   email: '',
   password: '',

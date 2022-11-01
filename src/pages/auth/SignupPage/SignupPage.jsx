@@ -61,7 +61,7 @@ const SignupPage = () => {
   useEffect(() => {
     if (user) {
       console.log('🚀 ~ file: SignupPage.jsx ~ line 65 ~ useEffect ~ user', user)
-      console.log('navigate to streams page')
+      console.log('navigate to streams page from signup page')
       setLoading(false)
       setFormState(signupInitialData)
     }
