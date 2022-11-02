@@ -1,8 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 import '@components/Input/Input.scss'
-import { bool, func, oneOfType, string } from 'prop-types'
+import { bool, func, object, oneOfType, string } from 'prop-types'
 
-const Input = ({ className, id, labelText, name, onChange, placeholder, type, value }) => {
+const Input = ({ className, id, labelText, name, onChange, placeholder, style, type, value }) => {
   return (
     <>
       <div className="form-row">
@@ -19,6 +19,7 @@ const Input = ({ className, id, labelText, name, onChange, placeholder, type, va
           name={name}
           onChange={onChange}
           placeholder={placeholder}
+          style={style}
           type={type}
           value={value}
         />
@@ -34,6 +35,7 @@ Input.propTypes = {
   labelText: string,
   name: string.isRequired,
   placeholder: string,
+  style: object,
   type: string.isRequired,
   value: oneOfType([string, bool])
 }

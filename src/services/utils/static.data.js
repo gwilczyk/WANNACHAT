@@ -241,6 +241,11 @@ export const sideBarItems = [
   }
 ]
 
+export const resetPasswordInitialData = {
+  cpassword: '',
+  password: ''
+}
+
 export const signinInitialData = {
   email: '',
   password: ''

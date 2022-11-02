@@ -114,7 +114,7 @@ const SignupPage = () => {
         </div>
         <Button
           className="auth-button button"
-          disabled={!username || !email || !password || loading || hasError}
+          disabled={!username || !email || !password || loading}
           label={`${loading ? 'SIGNUP IN PROGRESS…' : 'SIGNUP'}`}
         />
       </form>

@@ -106,7 +106,7 @@ const SigninPage = () => {
         </div>
         <Button
           className="auth-button button"
-          disabled={!email || !password || loading || hasError}
+          disabled={!email || !password || loading}
           label={`${loading ? 'SIGNIN IN PROGRESS…' : 'SIGNIN'}`}
         />
 
